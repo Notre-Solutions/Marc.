@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
+import MarcSymbolFull from '../../../assets/MarcSymbolFull.inline.svg';
+import ShoppingBag from '../../../assets/ShoppingBag.svg';
+import MagnifyingGlass from '../../../assets/MagnifyingGlass.svg';
 import { AuthUserContext } from '../Session';
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
@@ -8,57 +10,41 @@ import * as ROLES from '../../constants/roles';
 
 const Navigation = () => (
   <AuthUserContext.Consumer>
-    {(authUser) =>
-      authUser ? (
-        <NavigationAuth authUser={authUser} />
-      ) : (
-        <NavigationNonAuth />
-      )
-    }
+    {(authUser) => <NavigationMenu authUser={authUser} />}
   </AuthUserContext.Consumer>
 );
 
-const NavigationAuth = ({ authUser }) => (
-  <ul>
-    <li>
-      <Link to={ROUTES.LANDING}>Landing</Link>
-    </li>
-    <li>
-      <Link to={ROUTES.HOME}>Home</Link>
-    </li>
-    <li>
-      <Link to={ROUTES.ACCOUNT}>Account</Link>
-    </li>
-    <li>
-      <Link to={ROUTES.ACCOUNT_DETAILS}>Account Details</Link>
-    </li>
-    <li>
-      <Link to={ROUTES.CART}>Cart</Link>
-    </li>
-
-    {!!authUser.roles[ROLES.ADMIN] && (
-      <li>
-        <Link to={ROUTES.ADMIN}>Admin</Link>
+const NavigationMenu = (authUser) => (
+  <div>
+    <ul className="nav">
+      <li className="nav-item">
+        <Link to={ROUTES.LANDING}>
+          <MarcSymbolFull />
+        </Link>
       </li>
-    )}
-    <li>
-      <SignOutButton />
-    </li>
-  </ul>
-);
-
-const NavigationNonAuth = () => (
-  <ul>
-    <li>
-      <Link to={ROUTES.LANDING}>Landing</Link>
-    </li>
-    <li>
-      <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-    </li>
-    <li>
-      <Link to={ROUTES.CART}>Cart</Link>
-    </li>
-  </ul>
+      <div className="nav-main">
+        <li className="nav-item">
+          <Link to={ROUTES.PHONES}>PHONES</Link>
+        </li>
+        <li className="nav-item">
+          <Link to={ROUTES.LAPTOPS}>LAPTOPS</Link>
+        </li>
+        <li className="nav-item">
+          <Link to={ROUTES.ACCESSORIES}>ACCESSORIES</Link>
+        </li>
+      </div>
+      <div className="nav-sb">
+        <li className="nav-item">
+          <MagnifyingGlass />
+        </li>
+        <li className="nav-item">
+          <Link to={ROUTES.CART}>
+            <ShoppingBag />
+          </Link>
+        </li>
+      </div>
+    </ul>
+  </div>
 );
 
 export default Navigation;

@@ -10,9 +10,17 @@ module.exports = {
     {
       resolve: `gatsby-source-stripe`,
       options: {
-        objects: ['Sku','Product'],
+        objects: ['Sku', 'Product'],
         secretKey: process.env.STRIPE_SECRET_KEY,
         downloadFiles: false,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
       },
     },
   ],

@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  &-sb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    .nav-item:first-child {
+      padding: 0 2rem;
+    }
+  }
+  &-main {
+    margin: 0 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    a{
+      color: white;
+      font-size: 1.75rem;
+    }
+    .nav-item{
+      padding: 0 4rem;
+    }
+  }
+}

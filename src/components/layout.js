@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-
+import '../css/main.css'
 import Navigation from './Navigation';
 import getFirebase, { FirebaseContext } from './Firebase';
 import withAuthentication from './Session/withAuthentication';
@@ -35,7 +35,6 @@ class Layout extends Component {
 const AppWithAuthentication = withAuthentication(({ children }) => (
   <Fragment>
     <Navigation />
-    <hr />
     {children}
   </Fragment>
 ));
