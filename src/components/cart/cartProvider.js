@@ -44,7 +44,8 @@ class CartProvider extends Component {
     this.saveInCookies(0, {}, []);
   };
 
-  addToCart = (quantity, skuId, price, desc, img, productId) => {
+  addToCart = (quantity, skuId, price, desc, img, productId, productName) => {
+    console.log(productName);
     const cartTotal =
       Number(this.state.cartTotal) + Number(quantity) * Number(price);
 
@@ -65,6 +66,7 @@ class CartProvider extends Component {
         desc,
         img,
         productId,
+        productName
       };
       checkoutItems.push({ sku: skuId, quantity });
     }

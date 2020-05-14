@@ -5,12 +5,17 @@ import Checkout from '../Stripe/Checkout';
 
 export function displayItems(items) {
   var productsInCart = [];
+  console.log(items);
 
   Object.keys(items).forEach(function (key) {
     var product = {};
     product.id = key;
+    product.desc = items[key].desc
+    product.prodId = items[key].productId
+    product.img = items[key].img
     product.price = items[key].price;
     product.quantity = items[key].quantity;
+    product.productName = items[key].productName;
     productsInCart.push(product);
   });
 

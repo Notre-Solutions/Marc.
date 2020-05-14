@@ -1,0 +1,24 @@
+.shopping-bag-modal{
+  &-btn{
+    border: none;
+    background: none;
+  }
+  &-btn:hover{
+    cursor: pointer;
+  }
+  
+  
+  .modal-content{
+    
+    .bag{
+      
+      display: flex ;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      p{
+        color: red;
+      }
+    }
+  }
+}

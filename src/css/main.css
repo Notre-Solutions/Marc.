@@ -226,3 +226,32 @@ li {
 .nav-main .nav-item {
   padding: 0 4rem;
 }
+
+.shopping-bag-modal-btn {
+  border: none;
+  background: none;
+}
+
+.shopping-bag-modal-btn:hover {
+  cursor: pointer;
+}
+
+.shopping-bag-modal .modal-content .bag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shopping-bag-modal .modal-content .bag p {
+  color: red;
+}

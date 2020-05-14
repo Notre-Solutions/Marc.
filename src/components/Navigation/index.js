@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import MarcSymbolFull from '../../../assets/MarcSymbolFull.inline.svg';
-import ShoppingBag from '../../../assets/ShoppingBag.svg';
 import MagnifyingGlass from '../../../assets/MagnifyingGlass.svg';
 import { AuthUserContext } from '../Session';
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
-
+import ShoppingBagModal from '../ShoppingBag'
 const Navigation = () => (
   <AuthUserContext.Consumer>
     {(authUser) => <NavigationMenu authUser={authUser} />}
@@ -38,9 +37,8 @@ const NavigationMenu = (authUser) => (
           <MagnifyingGlass />
         </li>
         <li className="nav-item">
-          <Link to={ROUTES.CART}>
-            <ShoppingBag />
-          </Link>
+          <ShoppingBagModal/>
+            
         </li>
       </div>
     </ul>

@@ -4,7 +4,7 @@ import React, { useContext } from 'react';
 import { CartContext } from '../cart';
 import CheckoutWrapper from './Checkout';
 
-export function GetProducts() {
+export function GetProdSkuData() {
   const data = useStaticQuery(graphql`
     query SkusForProduct {
       allStripeSku {
@@ -24,43 +24,68 @@ export function GetProducts() {
           }
         }
       }
+      allStripeProduct {
+        nodes {
+          name
+          id
+        }
+      }
+      allStripeProduct {
+        nodes {
+          name
+          id
+        }
+      }
     }
   `);
-
-  return data.allStripeSku.edges;
+  return data;
 }
 
-export function GetProduct(id) {
-  var allProducts = GetProducts();
+export function GetProductNameById(id) {
+  const data = GetProdSkuData();
+  const nodes = data.allStripeProduct.nodes;
+  const prodMap = {};
+  nodes.map((node) => {
+    prodMap[node.id] = node.name;
+  });
+
+  return prodMap[id];
+}
+
+export function GetSku(id) {
+  var allSkus = GetProdSkuData().allStripeSku.edges;
   console.log(id);
-  console.log(allProducts);
-  return allProducts.filter((product) => product.node.id === id);
+  console.log(allSkus);
+  return allSkus.filter((product) => product.node.id === id);
 }
 
-export function GetProductCategory(category) {
-  var allProducts = GetProducts();
-  return allProducts.filter(
+export function GetSkuCategory(category) {
+  var allSkus = GetProdSkuData().allStripeSku.edges;
+  return allSkus.filter(
     (product) => product.node.metadata.Category === category,
   );
 }
 
 const Products = () => {
-  const edges = GetProducts();
-
+  const edges = GetProdSkuData().allStripeSku.edges;
   const context = useContext(CartContext);
+
+  
 
   return (
     <div>
       {edges.map((product) => {
+        const productName = GetProductNameById(product.node.product.id)
         return (
-          <div key={product.node.id}>
+          <div key={product.node.id} style={{ fontSize: '2rem' }}>
             <div>Name: {product.node.product.name}</div>
             <div>Price: {product.node.price}</div>
             <div>Id: {product.node.id}</div>
             <div>
               Category: {product.node.product.metadata.Category}
             </div>
-            <img src={product.node.image} alt="Product Image" />
+
+            {/* <img src={product.node.image} alt="Product Image" /> */}
             <button
               onClick={(e) =>
                 context.addToCart(
@@ -70,11 +95,13 @@ const Products = () => {
                   'description',
                   product.node.image,
                   product.node.product.id,
+                  productName
                 )
               }
             >
               Add to Cart
             </button>
+            <h1>{'- '}</h1>
           </div>
         );
       })}

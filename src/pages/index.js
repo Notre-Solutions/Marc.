@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import Layout from '../components/layout';
-
+import Products from '../components/Stripe/Products';
 function LandingPage() {
   return (
     <Fragment>
@@ -9,6 +9,7 @@ function LandingPage() {
         The Landing Page is open to everyone, even though the user
         isn't signed in.
       </p>
+      <Products></Products>
     </Fragment>
   );
 }
