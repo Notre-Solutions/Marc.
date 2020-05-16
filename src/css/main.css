@@ -115,9 +115,9 @@ li {
 
 @-webkit-keyframes moveInFromLeft {
   0% {
-    opacity: 0;
-    -webkit-transform: translateX(5rem);
-            transform: translateX(5rem);
+    opacity: 1;
+    -webkit-transform: translateX(2rem);
+            transform: translateX(2rem);
   }
   100% {
     opacity: 1;
@@ -128,9 +128,9 @@ li {
 
 @keyframes moveInFromLeft {
   0% {
-    opacity: 0;
-    -webkit-transform: translateX(5rem);
-            transform: translateX(5rem);
+    opacity: 1;
+    -webkit-transform: translateX(2rem);
+            transform: translateX(2rem);
   }
   100% {
     opacity: 1;
@@ -173,12 +173,11 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .nav-sb {
@@ -199,6 +198,76 @@ li {
 
 .nav-sb .nav-item:first-child {
   padding: 0 2rem;
+}
+
+.nav input[type='text'], .nav-input-loaded {
+  width: 130px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.75rem;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 0 1rem;
+  -webkit-transition: all 1s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-input-loaded {
+  -webkit-animation: transitionSearchOut 0.5s ease-in-out forwards;
+          animation: transitionSearchOut 0.5s ease-in-out forwards;
+}
+
+.nav .nav-title,
+.nav .nav-icons {
+  -webkit-animation: transitionIn 0.5s ease-in-out forwards;
+          animation: transitionIn 0.5s ease-in-out forwards;
+}
+
+.nav-search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.nav-search input[type='text'] {
+  width: 60rem;
+  -webkit-animation: transitionSearchIn 0.5s ease-in-out forwards;
+          animation: transitionSearchIn 0.5s ease-in-out forwards;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-search .nav-title,
+.nav-search .nav-icons {
+  -webkit-animation: transitionOut 0.2s ease-in-out forwards;
+          animation: transitionOut 0.2s ease-in-out forwards;
 }
 
 .nav-main {
@@ -225,6 +294,98 @@ li {
 
 .nav-main .nav-item {
   padding: 0 4rem;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+@-webkit-keyframes transitionSearchIn {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(-40rem);
+            transform: translateX(-40rem);
+  }
+}
+
+@keyframes transitionSearchIn {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(-40rem);
+            transform: translateX(-40rem);
+  }
+}
+
+@-webkit-keyframes transitionSearchOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(-40rem);
+            transform: translateX(-40rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+@keyframes transitionSearchOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(-40rem);
+            transform: translateX(-40rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+@-webkit-keyframes transitionOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes transitionOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes transitionIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes transitionIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .shopping-bag-modal-btn {

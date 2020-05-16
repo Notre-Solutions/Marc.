@@ -1,8 +1,11 @@
+
+
 .nav {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  align-self: center;
+
   &-sb {
     display: flex;
     flex-direction: row;
@@ -12,18 +15,110 @@
       padding: 0 2rem;
     }
   }
+
+  input[type='text'],&-input-loaded {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.75rem;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 0 1rem;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    // @include easeInOut;
+  }
+  &-input-loaded{
+    animation: transitionSearchOut 0.5s ease-in-out forwards;
+  }
+  
+  .nav-title,
+    .nav-icons {
+      animation: transitionIn 0.5s ease-in-out forwards;
+    }
+
+  &-search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  &-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    input[type='text'] {
+      width: 60rem;
+      animation: transitionSearchIn 0.5s ease-in-out forwards;
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+    }
+    .nav-title,
+    .nav-icons {
+      animation: transitionOut 0.2s ease-in-out forwards;
+    }
+  }
   &-main {
     margin: 0 5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    a{
+    a {
       color: white;
       font-size: 1.75rem;
     }
-    .nav-item{
+    .nav-item {
       padding: 0 4rem;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
     }
+  }
+}
+
+@keyframes transitionSearchIn {
+  0% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-40rem);
+  }
+}
+
+@keyframes transitionSearchOut {
+  0% {
+    opacity: 1;
+    transform: translateX(-40rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes transitionOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes transitionIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
