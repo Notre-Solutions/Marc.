@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import ShoppingBagIcon from '../../../assets/ShoppingBag.svg';
 import { CartContext } from '../cart';
 import { displayItems } from '../cart/cartComponent';
 
@@ -35,7 +34,8 @@ class ShoppingBag extends React.Component {
           onClick={() => this.handleOpenModal()}
           className="shopping-bag-modal-btn"
         >
-          <ShoppingBagIcon />
+           <i className="fas fa-shopping-bag"></i>
+           
         </button>
         <Modal
           className="modal-content"

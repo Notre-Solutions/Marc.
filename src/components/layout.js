@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import '../css/main.css'
-import Navigation from './Navigation';
+import {Header, Footer} from './Navigation';
 import getFirebase, { FirebaseContext } from './Firebase';
 import withAuthentication from './Session/withAuthentication';
-
+import "@fortawesome/fontawesome-free/css/all.css"
 class Layout extends Component {
   state = {
     firebase: null,
@@ -34,7 +34,7 @@ class Layout extends Component {
 
 const AppWithAuthentication = withAuthentication(({ children }) => (
   <Fragment>
-    <Navigation />
+    <Header />
     {children}
   </Fragment>
 ));

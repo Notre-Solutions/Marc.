@@ -48,7 +48,6 @@
   &-search {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     input[type='text'] {
       width: 60rem;
       animation: transitionSearchIn 0.5s ease-in-out forwards;
