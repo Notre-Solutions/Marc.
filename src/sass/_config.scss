@@ -1,7 +1,11 @@
 
 $dark_background: black;
 $text_color: white;
-
+:root {
+  --primary-color: rgba(202, 68, 219, 0.75);
+  --overlay-color: rgba(8, 59, 68, 0.85);
+  --menu-speed: 0.75s;
+}
 // setting init val
 *,
 *::after,
@@ -105,6 +109,39 @@ li {
   100% {
     opacity: 1;
     transform: rotate(720deg);
+  }
+}
+
+@mixin media-sm{
+  @media screen and (max-width: 666px) {
+    @content;
+  }
+}
+
+@mixin media-landscape {
+  @media screen and (orientation: landscape) and (max-height: 720px) {
+    @content;
+  }
+}
+
+// 1024px or Smaller
+@mixin media-md {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+// 1310px or smaller
+@mixin media-md-burger {
+  @media screen and (max-width: 1310px) {
+    @content;
+  }
+}
+
+// 1024px or Larger
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
   }
 }
 

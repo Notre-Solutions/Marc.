@@ -1,0 +1,13 @@
+@include media-md-burger {
+  .burger-menu{
+    visibility: visible !important;
+    display: block;
+  }
+  .nav{
+    &-title, &-search-bar, &-icons{
+      visibility: hidden;
+      display: none;
+    }
+    
+  }
+}

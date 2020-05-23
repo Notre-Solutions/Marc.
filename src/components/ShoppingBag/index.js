@@ -51,6 +51,7 @@ class ShoppingBag extends React.Component {
               right: 0,
               bottom: 0,
               backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              zIndex:5,
             },
             content: {
               position: 'absolute',
@@ -69,6 +70,7 @@ class ShoppingBag extends React.Component {
               justifyContent: 'center',
               alignItems: 'center',
               textAlign: 'center',
+              zIndex:6,
               // transform: 'translate(-50%, -50%)',
             },
           }}

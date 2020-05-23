@@ -1,3 +1,9 @@
+:root {
+  --primary-color: rgba(202, 68, 219, 0.75);
+  --overlay-color: rgba(8, 59, 68, 0.85);
+  --menu-speed: 0.75s;
+}
+
 *,
 *::after,
 *::before {
@@ -221,12 +227,6 @@ li {
           animation: transitionSearchOut 0.5s ease-in-out forwards;
 }
 
-.nav .nav-title,
-.nav .nav-icons {
-  -webkit-animation: transitionIn 0.5s ease-in-out forwards;
-          animation: transitionIn 0.5s ease-in-out forwards;
-}
-
 .nav-search-bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -293,6 +293,12 @@ li {
   padding: 0 4rem;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
+}
+
+.nav-title,
+.nav-icons {
+  -webkit-animation: transitionIn 0.5s ease-in-out forwards;
+          animation: transitionIn 0.5s ease-in-out forwards;
 }
 
 @-webkit-keyframes transitionSearchIn {
@@ -385,6 +391,184 @@ li {
   }
 }
 
+.burger-menu {
+  position: fixed;
+  top: 2rem;
+  right: 12%;
+  z-index: 1;
+}
+
+.burger-menu .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.burger-menu {
+  visibility: hidden;
+  display: none;
+}
+
+.burger-menu .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  border-radius: 5rem;
+  background: var(--primary-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.burger-menu .hamburger div {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.burger-menu .hamburger div::before, .burger-menu .hamburger div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+.burger-menu .hamburger div::after {
+  top: 10px;
+}
+
+.burger-menu .toggler:checked + .hamburger > div {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.burger-menu .toggler:checked + .hamburger > div:before,
+.burger-menu .toggler:checked + .hamburger > div:after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.burger-menu .toggler:checked:hover + .hamburger > div {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.burger-menu .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.burger-menu .toggler:checked ~ .menu > div {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-duration: var(--menu-speed);
+          transition-duration: var(--menu-speed);
+}
+
+.burger-menu .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease 0.4s;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+.burger-menu .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.burger-menu .menu > div {
+  background: var(--overlay-color);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.burger-menu .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+
+.burger-menu .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.burger-menu .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+
 .shopping-bag-modal i {
   color: white;
   font-size: 2.5rem;
@@ -417,4 +601,15 @@ li {
 
 .shopping-bag-modal .modal-content .bag p {
   color: red;
+}
+
+@media screen and (max-width: 1310px) {
+  .burger-menu {
+    visibility: visible !important;
+    display: block;
+  }
+  .nav-title, .nav-search-bar, .nav-icons {
+    visibility: hidden;
+    display: none;
+  }
 }
