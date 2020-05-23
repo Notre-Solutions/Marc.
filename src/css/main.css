@@ -17,15 +17,26 @@ a {
   text-decoration: none;
 }
 
+/**
+ * 1. Centers the content. Yes, it's a bit opinionated.
+ */
+.wrapper {
+  margin-right: auto;
+  /* 1 */
+  margin-left: auto;
+  /* 1 */
+  max-width: 960px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
 body {
-  margin-left: 20rem;
-  margin-right: 20rem;
-  font-family: "Asap", sans-serif;
+  font-family: 'Asap', sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: white;
   background: black;
-  padding: 3rem;
+  padding: 0 100px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -184,6 +195,7 @@ li {
           justify-content: space-between;
   -ms-flex-item-align: center;
       align-self: center;
+  padding: 2rem 0;
 }
 
 .nav-sb {
@@ -603,7 +615,7 @@ li {
   color: red;
 }
 
-@media screen and (max-width: 1310px) {
+@media screen and (max-width: 1024px) {
   .burger-menu {
     visibility: visible !important;
     display: block;
@@ -612,4 +624,134 @@ li {
     visibility: hidden;
     display: none;
   }
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.footer-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+.footer-top .footer-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 15rem;
+}
+
+.footer-top .footer-social-content {
+  height: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+}
+
+.footer-top .footer-social-content .tiktok {
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 3rem;
+  margin-bottom: 0rem;
+}
+
+.footer-top .footer-social-content i {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+.footer-top .footer-social-content h1 {
+  position: relative;
+  font-weight: 2;
+  font-size: 1.5rem;
+}
+
+.footer-top .footer-line {
+  margin: 0 2rem;
+  border-left: 2px solid white;
+  height: 6rem;
+}
+
+.footer-nav {
+  padding: 2rem;
+  background-color: white;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.8rem;
+}
+
+.footer-nav h3 {
+  font-weight: 2;
+  font-size: 1.5rem !important;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-nav-container {
+  width: 850px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-nav-container-content {
+  padding: 0 2rem;
+}
+
+.newsletter-form .row {
+  margin: 0.4rem 0;
 }

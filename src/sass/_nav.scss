@@ -1,8 +1,11 @@
+
+
 .nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-self: center;
+  padding: 2rem 0;
 
   &-sb {
     display: flex;
