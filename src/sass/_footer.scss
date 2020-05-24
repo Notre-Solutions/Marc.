@@ -3,11 +3,12 @@
   left: 0;
   width: 100%;
   margin-top: 5rem;
-  &-top {
+  &-top-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    padding: 1rem;
+    justify-content: space-between;
+
+    padding: 1rem 0;
     .footer-social {
       display: flex;
       flex-direction: row;
@@ -63,14 +64,11 @@
     }
     
     &-container{
-      width: 850px;
+      width: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      &-content{
-        padding: 0 2rem;
-      }
     }
   }
 }
