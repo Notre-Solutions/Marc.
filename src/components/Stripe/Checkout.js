@@ -7,7 +7,6 @@ const CheckoutWrapper = () => {
   return (
     <CartContext.Consumer>
       {(context) => {
-        console.log(context.checkoutItems);
         return <Checkout items={context.checkoutItems} />;
       }}
     </CartContext.Consumer>

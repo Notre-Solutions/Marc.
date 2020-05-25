@@ -1,23 +1,54 @@
-.card{
+.card {
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 
-  &-small{
+  }
+  &-compare {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    select {
+      margin: 1rem 0 3rem 0;
+    }
+    &-img {
+      width: 30rem; /* or any custom size */
+      height: 60%; 
+      object-fit: contain;
+    }
+    &-container {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    min-width: 20rem;
+    width: 40rem;
+      p {
+        margin: 2rem;
+      }
+    }
+  }
+
+  &-small {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-width: 20rem;
     width: 30rem;
-    &-title{
+    &-title {
       font-size: 3rem;
       font-weight: 2;
     }
-    &-price{
+    &-price {
       font-size: 1.5rem;
       font-weight: 2;
     }
-    &-img{
+    &-img {
       width: 100%;
     }
   }
-  
 }

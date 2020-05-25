@@ -45,7 +45,6 @@ class CartProvider extends Component {
   };
 
   addToCart = (quantity, skuId, price, desc, img, productId, productName) => {
-    console.log(productName);
     const cartTotal =
       Number(this.state.cartTotal) + Number(quantity) * Number(price);
 
@@ -78,8 +77,6 @@ class CartProvider extends Component {
       cartItems: currentCartItems,
       checkoutItems,
     });
-    console.log(checkoutItems);
-    console.log(this.state.checkoutItems);
   };
 
   removeFromCart = (skuId, price, quantity) => {

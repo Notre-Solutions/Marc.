@@ -4,8 +4,6 @@ import {AddToCartButton,LearnMoreButton} from '../Buttons'
 
 export default class smallCard extends Component {
   render() {
-    console.log(this.props);
-
     if(this.props.skuid){
       return (
         <div className="wrapper card-small">
@@ -13,8 +11,8 @@ export default class smallCard extends Component {
           <h1 className="card-small-title">{this.props.productName}</h1>
           <h1 className='card-small-price'>£{this.props.price}</h1>
           <AddToCartButton skuid={this.props.skuid} price={this.props.price} description={this.props.description}
-        image={this.props.image} prodid={this.props.prodid} productName={this.props.productName} />
-          <LearnMoreButton route={this.props.route}/>
+        image={this.props.image} prodid={this.props.prodid} productName={this.props.productName} isDark={false}/>
+          <LearnMoreButton route={this.props.route} isDark={false}/>
         </div>
       );
     }else{

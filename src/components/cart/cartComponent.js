@@ -5,7 +5,6 @@ import Checkout from '../Stripe/Checkout';
 
 export function displayItems(items) {
   var productsInCart = [];
-  console.log(items);
 
   Object.keys(items).forEach(function (key) {
     var product = {};
@@ -28,7 +27,6 @@ const Cart = () => {
     <div>
       <CartContext.Consumer>
         {(context) => {
-          console.log(context);
           return (
             <div>
               {displayItems(context.cartItems).map((product) => {

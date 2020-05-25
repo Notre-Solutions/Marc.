@@ -4,7 +4,9 @@ import Layout from '../components/layout';
 import Products from '../components/Stripe/Products';
 import HeroLanding from '../components/HeroLanding';
 import SmallCard from '../components/Cards/smallCard';
+import CompareCards from '../components/Cards/compareCards';
 import { database } from 'firebase';
+import {MinimalismBanner, FeatureBanner} from '../components/LandingBanner'
 export default ({ data }) => {
   var features = 2;
   const heroImage =
@@ -17,6 +19,9 @@ export default ({ data }) => {
       <div className="landing-hero">
         <HeroLanding heroImage={heroImage} heroSymbol={heroSymbol} />
       </div>
+      
+      <MinimalismBanner/>
+      <FeatureBanner/>
       <div className="landing-small-card-section">
         <div className="landing-small-cards-container">
           <div className="landing-small-cards wrapper">
@@ -46,11 +51,15 @@ export default ({ data }) => {
           </div>
         </div>
       </div>
-      <p>
+      <div className="wrapper">
+        <p>Dis Us</p>
+      </div>
+
+      {/* <p>
         The Landing Page is open to everyone, even though the user
         isn't signed in.
       </p>
-      <Products></Products>
+      <Products></Products> */}
     </Layout>
   );
 };

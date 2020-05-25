@@ -1077,6 +1077,65 @@ button {
   border-left: 1px solid black;
 }
 
+.card-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-compare {
+  width: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-compare select {
+  margin: 1rem 0 3rem 0;
+}
+
+.card-compare-img {
+  width: 30rem;
+  /* or any custom size */
+  height: 60%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card-compare-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 20rem;
+  width: 40rem;
+}
+
+.card-compare-container p {
+  margin: 2rem;
+}
+
 .card-small {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1131,4 +1190,132 @@ button {
   min-height: 300px;
   position: relative;
   float: left;
+}
+
+.feature-banner {
+  min-height: 250px;
+  width: 100%;
+  color: white;
+  background-color: black;
+  margin: 2rem;
+}
+
+.feature-banner-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feature-banner-content h1 {
+  font-size: 5rem;
+  font-weight: 2;
+}
+
+.feature-banner-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.feature-banner-content-images {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.feature-banner-content-images-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.feature-banner-content-images-img {
+  height: 100%;
+  width: 30rem;
+  margin: 1rem;
+}
+
+.minimalism-banner {
+  height: 50vh;
+  min-height: 400px;
+  width: 100%;
+  color: black;
+  background-color: white;
+}
+
+.minimalism-banner-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.minimalism-banner-content h1 {
+  font-size: 5rem;
+  font-weight: 2;
+}
+
+.minimalism-banner-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.minimalism-banner-content-images {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.minimalism-banner-content-images-img {
+  width: 20rem;
+  margin: 1rem;
 }
