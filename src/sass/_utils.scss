@@ -1,0 +1,41 @@
+.btn-wrap{
+  display: inline-block;
+  background: transparent;
+  border: none;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.btn{
+  display: flex;
+  margin: 1rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-width: 0.1rem; 
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-color: black;
+  color: black;
+  &-dark{
+    border-color: white !important;
+    color: white !important;
+    .line{
+      border-left: 1px solid white !important;
+    }
+  }
+  &-purple{
+    border-color: #A901FB !important;
+  }
+  &-blue{
+    border-color: #3C62E3 !important;
+  }
+  p,i{
+    padding: 0.2rem 1rem;
+  }
+  .line{
+    height: 1.8rem;
+    border-left: 1px solid black;
+  }
+}

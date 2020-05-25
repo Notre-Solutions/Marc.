@@ -51,7 +51,7 @@ export class Header extends Component {
     }
     return (
       <>
-        <div>
+        <div className="wrapper">
           <ul className={`nav nav${titleStyle}`}>
             <li className="nav-item">
               <Link to={ROUTES.LANDING}>

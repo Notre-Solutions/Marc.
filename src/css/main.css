@@ -36,7 +36,6 @@ body {
   line-height: 1.7;
   color: white;
   background: black;
-  padding: 0 100px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -180,6 +179,199 @@ li {
     -webkit-transform: rotate(720deg);
             transform: rotate(720deg);
   }
+}
+
+button {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-duration: 0;
+          animation-duration: 0;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: none;
+          animation-name: none;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+  background: 0;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: transparent;
+  background-image: none;
+  background-origin: padding-box;
+  background-position: 0 0;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: repeat;
+  background-size: auto auto;
+  border: 0;
+  border-style: none;
+  border-width: medium;
+  border-color: inherit;
+  border-bottom: 0;
+  border-bottom-color: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-style: none;
+  border-bottom-width: medium;
+  border-collapse: separate;
+  -o-border-image: none;
+     border-image: none;
+  border-left: 0;
+  border-left-color: inherit;
+  border-left-style: none;
+  border-left-width: medium;
+  border-radius: 0;
+  border-right: 0;
+  border-right-color: inherit;
+  border-right-style: none;
+  border-right-width: medium;
+  border-spacing: 0;
+  border-top: 0;
+  border-top-color: inherit;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-style: none;
+  border-top-width: medium;
+  bottom: auto;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  caption-side: top;
+  clear: none;
+  clip: auto;
+  color: inherit;
+  -webkit-columns: auto;
+          columns: auto;
+  -webkit-column-count: auto;
+          column-count: auto;
+  -webkit-column-fill: balance;
+          column-fill: balance;
+  -webkit-column-gap: normal;
+          column-gap: normal;
+  -webkit-column-rule: medium none currentColor;
+          column-rule: medium none currentColor;
+  -webkit-column-rule-color: currentColor;
+          column-rule-color: currentColor;
+  -webkit-column-rule-style: none;
+          column-rule-style: none;
+  -webkit-column-rule-width: none;
+          column-rule-width: none;
+  -webkit-column-span: 1;
+          column-span: 1;
+  -webkit-column-width: auto;
+          column-width: auto;
+  content: normal;
+  counter-increment: none;
+  counter-reset: none;
+  cursor: auto;
+  direction: ltr;
+  display: inline;
+  empty-cells: show;
+  float: none;
+  font: normal;
+  font-family: inherit;
+  font-size: medium;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: auto;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+  left: auto;
+  letter-spacing: normal;
+  line-height: normal;
+  list-style: none;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: disc;
+  margin: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  max-height: none;
+  max-width: none;
+  min-height: 0;
+  min-width: 0;
+  opacity: 1;
+  orphans: 0;
+  outline: 0;
+  outline-color: invert;
+  outline-style: none;
+  outline-width: medium;
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  page-break-after: auto;
+  page-break-before: auto;
+  page-break-inside: auto;
+  -webkit-perspective: none;
+          perspective: none;
+  -webkit-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+  position: static;
+  /* May need to alter quotes for different locales (e.g fr) */
+  quotes: '\201C' '\201D' '\2018' '\2019';
+  right: auto;
+  -moz-tab-size: 8;
+    -o-tab-size: 8;
+       tab-size: 8;
+  table-layout: auto;
+  text-align: inherit;
+  text-align-last: auto;
+  text-decoration: none;
+  -webkit-text-decoration-color: inherit;
+          text-decoration-color: inherit;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  top: auto;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transform-style: flat;
+          transform-style: flat;
+  -webkit-transition: none;
+  transition: none;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  unicode-bidi: normal;
+  vertical-align: baseline;
+  visibility: visible;
+  white-space: normal;
+  widows: 0;
+  width: auto;
+  word-spacing: normal;
+  z-index: auto;
+  /* basic modern patch */
+  all: initial;
+  all: unset;
 }
 
 .nav {
@@ -758,10 +950,10 @@ li {
 }
 
 .landing-hero .hero {
-  width: 100%;
   left: 0;
   height: 75vh;
-  min-height: 450px;
+  min-height: 500px;
+  width: 100%;
   position: absolute;
 }
 
@@ -769,7 +961,7 @@ li {
   background: black;
   position: absolute;
   height: 75vh;
-  min-height: 450px;
+  min-height: 500px;
   width: 100%;
   z-index: 1;
   opacity: 0.5;
@@ -814,14 +1006,129 @@ li {
 .landing-hero .hero-content h1 {
   text-align: center;
   font-size: 4rem;
+  font-weight: 2;
 }
 
 .landing-hero .hero-content .hero-symbol {
-  width: 20rem;
+  width: 15rem;
   position: relative;
 }
 
 .landing-hero .hero-background {
   height: 100%;
   width: 100%;
+}
+
+.btn-wrap {
+  display: inline-block;
+  background: transparent;
+  border: none;
+}
+
+.btn-wrap:hover {
+  cursor: pointer;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-width: 0.1rem;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-color: black;
+  color: black;
+}
+
+.btn-dark {
+  border-color: white !important;
+  color: white !important;
+}
+
+.btn-dark .line {
+  border-left: 1px solid white !important;
+}
+
+.btn-purple {
+  border-color: #A901FB !important;
+}
+
+.btn-blue {
+  border-color: #3C62E3 !important;
+}
+
+.btn p, .btn i {
+  padding: 0.2rem 1rem;
+}
+
+.btn .line {
+  height: 1.8rem;
+  border-left: 1px solid black;
+}
+
+.card-small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 20rem;
+  width: 30rem;
+}
+
+.card-small-title {
+  font-size: 3rem;
+  font-weight: 2;
+}
+
+.card-small-price {
+  font-size: 1.5rem;
+  font-weight: 2;
+}
+
+.card-small-img {
+  width: 100%;
+}
+
+.landing-small-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 45% 45% 5%;
+      grid-template-columns: 5% 45% 45% 5%;
+  height: 100%;
+  width: 100%;
+}
+
+.landing-small-cards-section {
+  height: 40vh;
+  min-height: 300px;
+}
+
+.landing-small-cards-container {
+  min-height: 40vh;
+  background-color: white;
+  width: 100%;
+  color: black;
+  min-height: 300px;
+  position: relative;
+  float: left;
 }

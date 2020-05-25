@@ -33,10 +33,18 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-background-image",
+      resolve: 'gatsby-background-image',
       options: {
         // add your own characters to escape, replacing the default ':/'
-        specialChars: "/:",
+        specialChars: '/:',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: 'stripeSku',
+        imagePath: 'image',
+        name: 'allItemImages',
       },
     },
     {
@@ -71,7 +79,7 @@ module.exports = {
       options: {
         objects: ['Sku', 'Product'],
         secretKey: process.env.STRIPE_SECRET_KEY,
-        downloadFiles: false,
+        downloadFiles: true,
       },
     },
     {

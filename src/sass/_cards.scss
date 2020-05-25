@@ -1,0 +1,23 @@
+.card{
+
+  &-small{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 20rem;
+    width: 30rem;
+    &-title{
+      font-size: 3rem;
+      font-weight: 2;
+    }
+    &-price{
+      font-size: 1.5rem;
+      font-weight: 2;
+    }
+    &-img{
+      width: 100%;
+    }
+  }
+  
+}
